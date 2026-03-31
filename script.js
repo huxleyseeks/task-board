@@ -116,6 +116,9 @@ function loadTasks() {
   tasks.forEach((task) => {
     const li = createTask(task.text);
     lists[task.column].appendChild(li);
+    if (task.column === 2) {
+      li.classList.add("done-task");
+    }
   });
   saveTasks();
   updateCounts();
