@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images-and-icons/task.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager</title>
+</head>
+<body>
+
+    <main>
+
+        <h1>Task Board📋</h1>
+        <p class="sub">Manage your tasks across three stages</p>
+    
+        <div class="add-row">
+            <input type="text" name="" id="task-input" placeholder="What needs to be done?">
+            <button id="add-btn">Add task</button>
+        </div>
+    
+        <div class="board">
+            <div class="column">
+                <div class="column-header">
+                    <span class="col-title">To Do</span>
+                    <span class="col-count" id="count-todo">0</span>
+                </div>
+                <ul class="task-list" id="list-todo"></ul>
+            </div>
+    
+            <div class="column">
+                <div class="column-header">
+                    <span class="col-title">In Progress</span>
+                    <span class="col-count" id="count-prog">0</span>
+                </div>
+                <ul class="task-list" id="list-prog"></ul>
+            </div>
+    
+            <div class="column">
+                <div class="column-header">
+                    <span class="col-title">Done</span>
+                    <span class="col-count" id="count-done">0</span>
+                </div>
+                <ul class="task-list" id="list-done"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 800px;
+    height: 100vh;
+    margin: auto;
+    padding: 20px;
+    color: #111;
+    background: #626262;
+    /* cursor: url("./task-app-icon.png") 8 8, auto; */
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #222;
+    background-position: center;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    color: #ddd;
+}
+
+p.sub {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.add-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    outline: none;
+    background: #333;
+    color: #ddd;
+}
+
+#task-input:focus {
+    border: 1px solid #111;
+}
+
+#add-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+    background: #eee;
+    color: #111;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background: #ddd;
+}
+
+#add-btn:active {
+    animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(.98);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.column {
+    background: #564e3e;
+    padding: 14px 14px 7px;
+    border-radius: 10px;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.col-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ddd;
+}
+
+.col-count {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+#count-todo {
+    color: #0c457d;
+    background: #e6f0fa;
+}
+
+#count-prog {
+    color: #663c0b;
+    background: #faeed9;
+}
+
+#count-done {
+    color: #264f09;
+    background: #e9f2dc;
+}
+
+.task-list {
+    list-style: none;
+    min-height: 48px;
+    max-height: 360px;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.task-list::-webkit-scrollbar {
+    display: none;
+}
+
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    background: #333;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    cursor: grab;
+    width: 100%;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 13px;
+    /* margin: 0 0 8px; */
+    color: #ddd;
+    max-height: 50px;
+    width: 80%;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: end;
+}
+
+.task-actions button {
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.del-btn {
+    display: flex;
+    color: red;
+    background: transparent;
+    border: none;
+}
+
+.del-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.del-btn:hover {
+    background:#444;
+}
+
+.done-task .task-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.dragging {
+    opacity: 0.4;
+}
